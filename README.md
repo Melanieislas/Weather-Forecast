@@ -14,7 +14,7 @@ Link to Deployed Application:
 
 The following screenshot shows 
 
-![WorkDayScheduler](https://user-images.githubusercontent.com/120453099/215929729-1ade5dae-1dc6-4103-a50e-5b5e92a11466.png)
+![NewYork](https://user-images.githubusercontent.com/120453099/218252644-06a4400f-5fb3-41c6-9b86-b46fed5f9cd5.png)
 
 
 ## License
