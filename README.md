@@ -16,6 +16,7 @@ The following screenshot shows
 
 ![NewYork](https://user-images.githubusercontent.com/120453099/218252644-06a4400f-5fb3-41c6-9b86-b46fed5f9cd5.png)
 
+![Denver](https://user-images.githubusercontent.com/120453099/218252668-23b9ab66-da86-4354-a626-d9f87de11f8a.png)
 
 ## License
 
