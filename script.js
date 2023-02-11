@@ -34,9 +34,37 @@ var Day5Wind = document.getElementById('Day5Wind');
 var Day5Hum = document.getElementById('Day5Hum');
 var icon5 = document.getElementById('icon6');
 var Atlanta = document.getElementById('Atlanta');
+var Denver = document.getElementById('Denver');
+var Seattle = document.getElementById('Seattle');
+var SanFrancisco = document.getElementById('SanFrancisco');
+var Orlando = document.getElementById('Orlando');
+var NewYork = document.getElementById('NewYork');
+var Chicago = document.getElementById('Chicago');
+var Austin = document.getElementById('Austin');
 
 function clickedAtlanta() {
     search.value = 'Atlanta';
+}
+function clickedDenver() {
+    search.value = 'Denver';
+}
+function clickedSeattle() {
+    search.value = 'Seattle';
+}
+function clickedSanFrancisco() {
+    search.value = 'San Francisco';
+}
+function clickedOrlando() {
+    search.value = 'Orlando';
+}
+function clickedNY() {
+    search.value = 'New York';
+}
+function clickedChicago() {
+    search.value = 'Chicago';
+}
+function clickedAustin() {
+    search.value = 'Austin';
 }
 
 function updateSearch() {
@@ -191,3 +219,10 @@ function updateSearch() {
 
 button.addEventListener("click", updateSearch);
 Atlanta.addEventListener("click", clickedAtlanta);
+Denver.addEventListener("click", clickedDenver);
+Seattle.addEventListener("click", clickedSeattle);
+SanFrancisco.addEventListener("click", clickedSanFrancisco);
+Orlando.addEventListener("click", clickedOrlando);
+NewYork.addEventListener("click", clickedNY);
+Chicago.addEventListener("click", clickedChicago);
+Austin.addEventListener("click", clickedAustin);
