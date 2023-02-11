@@ -33,6 +33,11 @@ var Day5Temp = document.getElementById('Day5Temp');
 var Day5Wind = document.getElementById('Day5Wind');
 var Day5Hum = document.getElementById('Day5Hum');
 var icon5 = document.getElementById('icon6');
+var Atlanta = document.getElementById('Atlanta');
+
+function clickedAtlanta() {
+    search.value = 'Atlanta';
+}
 
 function updateSearch() {
     coordinates = 'http://api.openweathermap.org/geo/1.0/direct?q=' + search.value + '&limit=1&appid=' + APIKey;
@@ -74,6 +79,9 @@ function updateSearch() {
                     else if ( data.list[index].weather[0].main === 'Snow') {
                         icon.innerHTML = "<img src='Snow.png' width='50' height='60' class='center'/>";
                     }
+                    else if ( data.list[index].weather[0].main === 'Rain') {
+                        icon.innerHTML = "<img src='Rain.png' width='50' height='60' class='center'/>";
+                    }
 
                     var forecast1 = dayjs(todaysDate).add(1, 'd').format('MM/DD/YYYY');
                     console.log(forecast1);
@@ -90,6 +98,9 @@ function updateSearch() {
                     }
                     else if ( data.list[index].weather[0].main === 'Snow') {
                         icon1.innerHTML = "<img src='Snow.png' width='50' height='60' class='center'/>";
+                    }
+                    else if ( data.list[index].weather[0].main === 'Rain') {
+                        icon1.innerHTML = "<img src='Rain.png' width='50' height='60' class='center'/>";
                     }
 
                     var forecast2 = dayjs(todaysDate).add(2, 'd').format('MM/DD/YYYY');
@@ -108,6 +119,9 @@ function updateSearch() {
                     else if ( data.list[index].weather[0].main === 'Snow') {
                         icon2.innerHTML = "<img src='Snow.png' width='50' height='60' class='center'/>";
                     }
+                    else if ( data.list[index].weather[0].main === 'Rain') {
+                        icon2.innerHTML = "<img src='Rain.png' width='50' height='60' class='center'/>";
+                    }
 
                     var forecast3 = dayjs(todaysDate).add(3, 'd').format('MM/DD/YYYY');
                     console.log(forecast3);
@@ -124,6 +138,9 @@ function updateSearch() {
                     }
                     else if ( data.list[index].weather[0].main === 'Snow') {
                         icon3.innerHTML = "<img src='Snow.png' width='50' height='60' class='center'/>";
+                    }
+                    else if ( data.list[index].weather[0].main === 'Rain') {
+                        icon3.innerHTML = "<img src='Rain.png' width='50' height='60' class='center'/>";
                     }
 
                     var forecast4 = dayjs(todaysDate).add(4, 'd').format('MM/DD/YYYY');
@@ -142,6 +159,9 @@ function updateSearch() {
                     else if ( data.list[index].weather[0].main === 'Snow') {
                         icon4.innerHTML = "<img src='Snow.png' width='50' height='60' class='center'/>";
                     }
+                    else if ( data.list[index].weather[0].main === 'Rain') {
+                        icon4.innerHTML = "<img src='Rain.png' width='50' height='60' class='center'/>";
+                    }
 
                     var forecast5 = dayjs(todaysDate).add(5, 'd').format('MM/DD/YYYY');
                     console.log(forecast5);
@@ -159,6 +179,9 @@ function updateSearch() {
                     else if ( data.list[index].weather[0].main === 'Snow') {
                         icon5.innerHTML = "<img src='Snow.png' width='50' height='60' class='center'/>";
                     }
+                    else if ( data.list[index].weather[0].main === 'Rain') {
+                        icon5.innerHTML = "<img src='Rain.png' width='50' height='60' class='center'/>";
+                    }
 
                 })
         })
@@ -167,3 +190,4 @@ function updateSearch() {
 }
 
 button.addEventListener("click", updateSearch);
+Atlanta.addEventListener("click", clickedAtlanta);
