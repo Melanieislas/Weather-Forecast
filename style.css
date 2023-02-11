@@ -1,11 +1,14 @@
 
-body {
-    background-image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pond5.com%2Fstock-footage%2Fitem%2F36432391-weather-forecast-background-time-lapse-footage-blue-sky-clou&psig=AOvVaw06M07w7ciDAPuYSb2gZ_N3&ust=1676165825728000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCLi3tbeqjP0CFQAAAAAdAAAAABAE';
-}
 
 .cardgroup {
     white-space: nowrap;
     margin: 10px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .Listitems {
