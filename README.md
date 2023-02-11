@@ -12,9 +12,11 @@
 
 Link to Deployed Application: 
 
-The following screenshot shows 
+The following screenshot shows the weather forecast for New York City
 
 ![NewYork](https://user-images.githubusercontent.com/120453099/218252644-06a4400f-5fb3-41c6-9b86-b46fed5f9cd5.png)
+
+This screenshot shows the five day forecast for Denver City
 
 ![Denver](https://user-images.githubusercontent.com/120453099/218252668-23b9ab66-da86-4354-a626-d9f87de11f8a.png)
 
@@ -24,4 +26,4 @@ For this repository, I used the MIT License.
 
 ## Features
 
-This project is a daily planner with the current weekday, day, and year displayed at the top of the page. The planner is separated in hour intervals from 9AM-5PM and is color coded for past, present, and future. 
+For this project, I built a five day weather forecast using a https://openweathermap.org/ Api and Bootstrap Styles. In this application, I have a form to enter any city, and a submit button which generates a forecast for that city along with an icon to represent the conditons. Below this form, I have some preselected popular cities to click, and submit to view the weather conditions and forecast.
