@@ -5,8 +5,8 @@
 - My motivation for this project was to create a weather forecast website that displayed the temperature, wind, and humidity of any city entered
 - This webpage includes a five day forecast with information of the weather each day
 - From this project, I learned used the Open Weather Api to fetch all of my weather data and display it in the screen
--For the styling of this project, I used Bootstrap to style the entire webpage, also calling my CSS for minimal changes
--For each weather condition, an icon is shown to represent any rain, snow, clouds, or sun for the day
+- For the styling of this project, I used Bootstrap to style the entire webpage, also calling my CSS for minimal changes
+- For each weather condition, an icon is shown to represent any rain, snow, clouds, or sun for the day
 
 ## Usage
 
