@@ -9,6 +9,24 @@ var ForecastDay2 = document.getElementById('Day2');
 var ForecastDay3 = document.getElementById('Day3');
 var ForecastDay4 = document.getElementById('Day4');
 var ForecastDay5 = document.getElementById('Day5');
+var MainDayTemp = document.getElementById('MainDayTemp');
+var MainDayWind = document.getElementById('MainDayWind');
+var MainDayHum = document.getElementById('MainDayHum');
+var Day1Temp = document.getElementById('Day1Temp');
+var Day1Wind = document.getElementById('Day1Wind');
+var Day1Hum = document.getElementById('Day1Hum');
+var Day2Temp = document.getElementById('Day2Temp');
+var Day2Wind = document.getElementById('Day2Wind');
+var Day2Hum = document.getElementById('Day2Hum');
+var Day3Temp = document.getElementById('Day3Temp');
+var Day3Wind = document.getElementById('Day3Wind');
+var Day3Hum = document.getElementById('Day3Hum');
+var Day4Temp = document.getElementById('Day4Temp');
+var Day4Wind = document.getElementById('Day4Wind');
+var Day4Hum = document.getElementById('Day4Hum');
+var Day5Temp = document.getElementById('Day5Temp');
+var Day5Wind = document.getElementById('Day5Wind');
+var Day5Hum = document.getElementById('Day5Hum');
 
 function updateSearch() {
     coordinates = 'http://api.openweathermap.org/geo/1.0/direct?q=' + search.value + '&limit=1&appid=' + APIKey;
@@ -24,34 +42,64 @@ function updateSearch() {
             console.log(lon)
             var lat = data[0].lat;
             console.log(lat)
-            queryURL = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + "&lon=" + lon + '&appid=' + APIKey + '&units=imperial';
+            queryURL = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + "&lon=" + lon + '&limit=70&appid=' + APIKey + '&units=imperial';
             fetch(queryURL)
                 .then( function (response) {
                     return response.json();
                 })
                 .then(function (data) {
                     console.log(data)
+                    var index =0;
                     today.textContent = data.city.name;
-                    var todaysDate = data.list[0].dt_txt;
+                    var todaysDate = data.list[index].dt_txt;
                     console.log(todaysDate)
                     var todayDateDisplay = dayjs(todaysDate).format('MM/DD/YYYY');
                     console.log(todayDateDisplay);
                     MainDate.textContent = todayDateDisplay;
+                    MainDayTemp.textContent = ('Temperature: ' + data.list[index].main.temp + ' °F');
+                    MainDayWind.textContent = ('Wind: ' + data.list[index].wind.speed + ' MPH');
+                    MainDayHum.textContent = ('Humidity: ' + data.list[index].main.humidity + ' %');
+
                     var forecast1 = dayjs(todaysDate).add(1, 'd').format('MM/DD/YYYY');
                     console.log(forecast1);
+                    index = index + 8;
                     ForecastDay1.textContent = forecast1;
+                    Day1Temp.textContent = ('Temp: ' + data.list[index].main.temp + ' °F');
+                    Day1Wind.textContent = ('Wind: ' + data.list[index].wind.speed + ' MPH');
+                    Day1Hum.textContent = ('Humidity: ' + data.list[index].main.humidity + ' %');
+
                     var forecast2 = dayjs(todaysDate).add(2, 'd').format('MM/DD/YYYY');
                     console.log(forecast2);
+                    index = index + 8;
                     ForecastDay2.textContent = forecast2;
+                    Day2Temp.textContent = ('Temp: ' + data.list[index].main.temp + ' °F');
+                    Day2Wind.textContent = ('Wind: ' + data.list[index].wind.speed + ' MPH');
+                    Day2Hum.textContent = ('Humidity: ' + data.list[index].main.humidity + ' %');
+
                     var forecast3 = dayjs(todaysDate).add(3, 'd').format('MM/DD/YYYY');
                     console.log(forecast3);
+                    index = index + 8;
                     ForecastDay3.textContent = forecast3;
+                    Day3Temp.textContent = ('Temp: ' + data.list[index].main.temp + ' °F');
+                    Day3Wind.textContent = ('Wind: ' + data.list[index].wind.speed + ' MPH');
+                    Day3Hum.textContent = ('Humidity: ' + data.list[index].main.humidity + ' %');
+
                     var forecast4 = dayjs(todaysDate).add(4, 'd').format('MM/DD/YYYY');
                     console.log(forecast4);
+                    index = index + 8;
                     ForecastDay4.textContent = forecast4;
+                    Day4Temp.textContent = ('Temp: ' + data.list[index].main.temp + ' °F');
+                    Day4Wind.textContent = ('Wind: ' + data.list[index].wind.speed + ' MPH');
+                    Day4Hum.textContent = ('Humidity: ' + data.list[index].main.humidity + ' %');
+
                     var forecast5 = dayjs(todaysDate).add(5, 'd').format('MM/DD/YYYY');
                     console.log(forecast5);
+                    index = index + 7;
                     ForecastDay5.textContent = forecast5;
+                    Day5Temp.textContent = ('Temp: ' + data.list[index].main.temp + ' °F');
+                    Day5Wind.textContent = ('Wind: ' + data.list[index].wind.speed + ' MPH');
+                    Day5Hum.textContent = ('Humidity: ' + data.list[index].main.humidity + ' %');
+
                 })
         })
         
