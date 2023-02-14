@@ -69,7 +69,7 @@ function clickedAustin() {
 
 function updateSearch(event) {
     event.preventDefault();
-    coordinates = 'http://api.openweathermap.org/geo/1.0/direct?q=' + search.value + '&limit=1&appid=' + APIKey;
+    coordinates = 'https://api.openweathermap.org/geo/1.0/direct?q=' + search.value + '&limit=1&appid=' + APIKey;
 
     fetch(coordinates)
         .then(function (response) {
@@ -81,7 +81,7 @@ function updateSearch(event) {
             console.log(lon)
             var lat = data[0].lat;
             console.log(lat)
-            queryURL = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + "&lon=" + lon + '&limit=70&appid=' + APIKey + '&units=imperial';
+            queryURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + "&lon=" + lon + '&limit=70&appid=' + APIKey + '&units=imperial';
             fetch(queryURL)
                 .then( function (response) {
                     return response.json();
