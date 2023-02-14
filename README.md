@@ -10,7 +10,7 @@
 
 ## Usage
 
-Link to Deployed Application: 
+Link to Deployed Application: https://melanieislas.github.io/Weather-Forecast/
 
 The following screenshot shows the weather forecast for New York City
 
