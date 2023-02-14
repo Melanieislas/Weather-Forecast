@@ -67,9 +67,9 @@ function clickedAustin() {
     search.value = 'Austin';
 }
 
-function updateSearch() {
+function updateSearch(event) {
+    event.preventDefault();
     coordinates = 'http://api.openweathermap.org/geo/1.0/direct?q=' + search.value + '&limit=1&appid=' + APIKey;
-    console.log(search.value);
 
     fetch(coordinates)
         .then(function (response) {
